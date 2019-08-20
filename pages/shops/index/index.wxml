@@ -1,0 +1,58 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">
+  获取用户信息
+</button> -->
+  <!-- Serch -->
+  <view class="search">
+    <navigator url="../../shops/index/Searchs/index">
+    <view class="sercon">
+      <icon class="icons" type="search" size="15" />
+      <span>请输入搜索关键字</span>
+    </view>
+    </navigator>
+  </view>
+  <!-- Swipe -->
+  <view>
+    <swiper class="swheig" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item bindtap="navTos" data-url="../../shops/detail/index" data-cid="{{item.productId}}">
+          <image src="{{item.bannerImg}}" mode="widthFix" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- types -->
+  <view class="menus">
+    <view class="mensitem">
+      <view class="menulist" bindtap="chooseType" data-typeid="{{types.productClassId}}" wx:for="{{Typesdata}}" wx:for-item="types">
+        <image src="{{types.icon}}" class="in-icon" />
+        <view>{{types.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- list -->
+  <view class="bestgoods" wx:if="{{iszuts}}">主推产品</view>
+  <view class="lists" wx:if="{{!!datalist}}">
+    <view class="listitem" wx:for="{{datalist}}" wx:for-item="items" wx:key="items.productId">
+      <!-- <navigator url="../../shops/detail/index"> -->
+      <view bindtap="navTos" data-url="../../shops/detail/index" data-cid="{{items.productId}}">
+        <image mode="aspectFill" src="{{items.firstImg}}" />
+        <view class="listconts">
+          <view class="tit">{{items.name}}</view>
+          <view class="dec">{{items.desc}}</view>
+          <view class="pri">￥{{items.price}}</view>
+        </view>
+      </view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+
+  <view class="lotc" wx:if="{{!canuser}}">
+    <view class="lotcs">
+      <view class="lotctext">请允许小程序获取您的信息</view>
+      <button class="lotcsbtn" open-type="getUserInfo" bind:getuserinfo="getUserInfo">去授权</button>
+    </view>
+    
+  </view>
+</view>

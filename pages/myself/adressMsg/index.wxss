@@ -1,0 +1,28 @@
+/* pages/myself/adressMsg/index.wxss */
+.adscon{
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.adslist{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1rpx #ddd solid;
+  padding: 20rpx 20rpx;
+}
+.adstit{
+  width: 140rpx;
+  margin-right: 40rpx;
+}
+.adrcon{
+  width: 60vw;
+}
+.suerbtn{
+  width: 80vw;
+  margin: 40rpx auto;
+  background-color: #3C79F7;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}

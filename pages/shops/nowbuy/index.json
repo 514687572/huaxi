@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-modal": "../../../iview/modal/index",
+    "i-input-number": "../../../iview/input-number/index"
+  },
+  "navigationBarTitleText": "确认订单"
+}

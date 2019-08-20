@@ -1,0 +1,28 @@
+<!--pages/myself/getMoney/index.wxml-->
+<view class="">
+  <view class="vitop">
+    <view >提现金额</view>
+    <view class="vitext">
+      <view class="alinp"><label class="alp">￥</label><input type="digit" value="{{getpics}}" placeholder="可提现金额{{maxprice}}" bindchange="getpice"/></view>
+      <view class="alltext" bindtap="allpas">全部</view>
+    </view>
+  </view>
+  <view class="alri">
+    <view >选择提现到</view>
+     <radio-group class="radio-group" bindchange="chooset">
+      <label wx:if="{{alldatas.bindWx}}" class="radio ralist">
+        <radio color="#3C79F7" value="1"/>
+        <view class="raitem">微信</view>
+      </label>
+      <label wx:if="{{alldatas.bindAliPay}}"  class="radio ralist">
+        <radio color="#3C79F7" value="2"/>
+        <view class="raitem">支付宝</view>
+      </label>
+      <label wx:if="{{alldatas.bindCard}}"  class="radio ralist">
+        <radio color="#3C79F7" value="3"/>
+        <view class="raitem">银行卡</view>
+      </label>
+    </radio-group>
+  </view>
+  <view class="bbtns" bindtap="getData">确定</view>
+</view>

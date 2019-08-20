@@ -1,0 +1,50 @@
+<!-- pages/cars/index.wxml -->
+<view class="container">
+  <view wx:if="{{!carExit}}" class="cartop" bindtap="openExc">编辑商品</view>
+  <view wx:if="{{carExit}}" class="cartop" bindtap="overExc">完成</view>
+  <view class="carlist">
+    <view class="caritem" wx:for="{{Alldata}}" wx:for-item="itemsa" wx:for-index="i" wx:key="{{itemsa.shoppingCartId}}">
+      <label class="radio varc" bindtap="Cheadit" data-num="{{i}}" >
+        <radio color="#157FF0" value="{{itemsa.shoppingCartId}}" checked="{{itemsa.check}}" />
+      </label>
+      <navigator url="../../pages/shops/detail/index?cId={{itemsa.productId}}" class="linksr">
+        <image mode="aspectFill" src="{{itemsa.firstImg}}" class="carimg" />
+        <view class="carsname">
+          <view class="carname">{{itemsa.productName}}</view>
+          <view class="carprie">{{itemsa.properties}}</view>
+          <view class="carpri">￥{{itemsa.price}}</view>
+        </view>
+      </navigator>
+      <view class="carsum">
+        <i-panel title="">
+          <view class="gritmes">
+            <i-input-number type="number" value="{{ itemsa.count }}" min="1" max="999999" bindchange="chancenum" data-num="{{i}}"/>
+          </view>
+        </i-panel>
+      </view>
+    </view>
+  </view>
+  <!-- 购物车统计结算 -->
+  <view class="carccums">
+    <view>
+      <label class="radio" bindtap="CheAll">
+        <radio color="#157FF0" value="" checked="{{allcheck}}" />
+        全选
+      </label>
+    </view>
+    <view class="carsri">
+      <view wx:if="{{!carExit}}" style="text-align: right;">
+        <view>
+          合计:
+          <span class="pric">￥{{allprice}}</span>
+        </view>
+        <view class="carall">共{{allcunt}}件商品</view>
+      </view>
+      <view wx:if="{{!carExit}}" class="goprice" bindtap="gopays" data-url="../shops/nowbuy/index">去结算</view>
+      <view wx:if="{{carExit}}" class="goprice" bindtap="openTc">删除</view>
+    </view>
+  </view>
+  <i-modal title="提示" visible="{{shwotc}}" bind:ok="Delcars" bind:cancel="Closetc" style="z-index:999999">
+    <view>确定要删除选中商品吗?</view>
+</i-modal>
+</view>

@@ -1,0 +1,61 @@
+<!--pages/shops/nowbuy/index.wxml-->
+<view class="orcon">
+  <view wx:if='{{adresslen}}' class="adretop" bindtap="showAdress">
+    <view class="admsg">
+      <view >{{adressdta.receiverName}}  {{adressdta.phone}}</view>
+      <view class="ordec">{{adressdta.pro}} {{adressdta.city}} {{adressdta.area}} {{adressdta.detailAddress}}</view>
+    </view>
+    <view >
+      <image class="orjticon" src="../../../images/my/jt.png" />
+      </view>
+  </view>
+  <view wx:else>
+    <navigator class="addad" url="../../myself/adressManagement/index">添加地址</navigator>
+  </view>
+
+  <view class="oritems">
+    <view class="oritem" wx:for="{{dedata.productOrderSnapshots}}" wx:for-item="itemss" wx:for-index="i" wx:key="i">  
+      <view class="oritleft">
+        <image src="{{itemss.firstImg}}" class="orimg" mode="aspectFill"/>
+        <view >
+          <view class="orname">{{itemss.productName}}</view>
+          <view class="orpice">￥{{itemss.price}}</view>
+           <view class="carsum">
+            <i-panel title="">
+              <view class="gritmes">
+                <text>库存数量: </text><i-input-number type="number" value="{{ itemss.storeCount }}" min="0" max="{{ itemss.count }}" bindchange="chancenum" data-cid="{{itemss.productOrderSnapshotId}}"/>
+              </view>
+            </i-panel>
+          </view>
+        </view>
+      </view>
+      <view >x{{itemss.count}}</view>
+    </view>
+  
+  </view>
+  <view class="contprices">
+    <view class="orplist">
+      <view>商品金额</view>
+      <view class="orpice">￥{{allprice}}</view>
+    </view>
+    <view class="orplist" wx:if="{{freight != undefined || freight != ''}}">
+      <view>运费</view>
+      <view class="orpice">￥{{freight}}</view>
+    </view>
+    <view class="orplists">
+       <view>实付金额：</view>
+        <view class="orpice">￥{{dedata.totalAmount}}</view>
+    </view>
+  </view>
+  <view class="orpay" bindtap="payNows">微信支付</view>
+
+  <!---->
+  <i-modal visible="{{ visible1 }}" bind:ok="suruser" bind:cancel="closeuser">
+    <radio-group class="radio-group" bindchange="chooseexpss">
+      <label class="radio ralist"  wx:for="{{Alldata}}" wx:for-item="itemsa" wx:key="{{itemsa.receiverAddressId}}">
+        <radio color="#3C79F7" value="{{itemsa.receiverAddressId}}"/>
+        <view class="raitem" style="text-align:left;">{{itemsa.pro}} {{itemsa.city}} {{itemsa.area}} {{itemsa.detailAddress}}</view>
+      </label>
+    </radio-group>
+  </i-modal>
+</view>

@@ -1,0 +1,18 @@
+<!--pages/myself/storeInfo/index.wxml-->
+<view class="">
+  <view class="inlist">
+    <view class="item" wx:for="{{Alldata}}" wx:for-item="itemsa" wx:for-index="i" wx:key="i">
+      <view class="itcons">
+        <view class="linimg"><image src="{{itemsa.images}}" mode="aspectFit"/></view>
+        <view class="intiit">
+          <view >{{itemsa.productName}}</view>
+          <view class="intime">{{itemsa.properties}}</view>
+          <view class="pircecut">
+        <view class="pircecut">团队购买总数:{{itemsa.count}}</view>
+      </view>
+          </view>
+      </view>
+    </view>
+  </view>
+</view>
+

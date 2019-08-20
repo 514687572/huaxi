@@ -1,0 +1,88 @@
+/* pages/myself/linedeal/index.wxss */
+.cont{
+  padding: 84rpx 0 120rpx 0;
+}
+.cont .menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #666;
+  border-bottom: 1px #ddd solid;
+  background-color: #fff;
+}
+.menu .items{
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.menu .avtive{
+  color: #3C79F7;
+  border-bottom: 1rpx #3C79F7 solid;
+}
+.conts{
+  margin-bottom: 30rpx;
+  background-color: #fff;
+}
+.citems{
+  margin-bottom: 20rpx;
+}
+.conts .top{
+  padding: 30rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx #ddd solid;
+}
+.ttime{
+
+}
+.ttype{
+
+}
+.orcont{
+  width: 80vw;
+  display: flex;
+  justify-content: flex-start;
+}
+.ordec{
+  color: #999;
+  margin-top: 20rpx;
+}
+.comsg{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  border-bottom: 1rpx #ddd solid;
+}
+.coimgs{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+}
+.botmsg{
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price{
+  color: #E51C23;
+}
+.avtive{
+  color: #3C79F7;
+  border-bottom: 1rpx #3C79F7 solid;
+}
+.clbtns{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #3C79F7;
+  color: #fff;
+  text-align: center;
+  line-height: 100rpx;
+}

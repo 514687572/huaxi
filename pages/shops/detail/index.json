@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "i-action-sheet": "../../../iview/action-sheet/index",
+    "i-input-number": "../../../iview/input-number/index"
+  }
+}

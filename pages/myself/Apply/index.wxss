@@ -1,0 +1,26 @@
+/* pages/myself/Apply/index.wxss */
+.aplist{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #666;
+  border-bottom:1rpx #ddd solid;
+}
+.aptit{
+  width: 160rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+.subtn{
+  width: 600rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #3C79F7;
+  margin: 40rpx auto;
+  border-radius: 10rpx;
+}

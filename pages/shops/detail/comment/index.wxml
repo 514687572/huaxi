@@ -1,0 +1,27 @@
+<!--pages/shops/detail/comment/index.wxml-->
+<view class="container">
+   <!-- 评论 -->
+   <view class="conts lists detail">
+    <!-- 评论列表 -->
+    <view>
+      <view class="pcon" wx:for="{{comdata}}" wx:for-item="itemsc" wx:key="{{itemsc.productCommentId}}">
+      <view class="listi">
+        <view class="lile">
+          <image class="icons" src="{{itemsc.headImg}}" mode="scaleToFill" />
+          {{itemsc.userName}}
+        </view>
+        <view class="lirig">
+          <view class="ptime">{{itemsc.commentTime}}</view>
+        </view>
+      </view>
+      <view class="pcont">
+        {{itemsc.commentContent}}
+        <view v-if="itemsc.commentImages">
+          <image src="{{imtemimg}}" wx:for="{{itemsc.commentImages}}" wx:for-item="imtemimg" mode="aspectFit" />
+        </view>
+      </view>
+    </view>
+    </view>
+    
+  </view>
+</view>

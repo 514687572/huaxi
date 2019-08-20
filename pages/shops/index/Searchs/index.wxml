@@ -1,0 +1,25 @@
+<!--pages/shops/index/Searchs/index.wxml-->
+<view class="">
+   <view class="search">
+    <view class="sercon">
+      <icon class="icons" type="search" size="15" />
+      <input type="text" bindinput="Serlist" placeholder="请输入商品名称"></input>
+    </view>
+  </view>
+  <!-- list -->
+  <view class="lists" wx:if="{{!!datalist}}">
+    <view class="listitem" wx:for="{{datalist}}" wx:for-item="items" wx:key="items.productId">
+      <!-- <navigator url="../../shops/detail/index"> -->
+      <view bindtap="navTos" data-url="../../../shops/detail/index" data-cid="{{items.productId}}">
+        <image mode="aspectFill" src="{{items.firstImg}}" />
+        <view class="listconts">
+          <view class="tit">{{items.name}}</view>
+          <view class="dec">{{items.desc}}</view>
+          <view class="pri">￥{{items.price}}</view>
+        </view>
+      </view>
+      <!-- </navigator> -->
+    </view>
+  </view>
+  <i-load-more wx:if="{{noList}}" tip="暂无数据" loading="{{ false }}" />
+</view>

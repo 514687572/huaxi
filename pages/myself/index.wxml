@@ -1,0 +1,216 @@
+<!-- pages/myself/index.wxml -->
+<view class="container">
+  <view class="head conts">
+    <view class="msgicon">
+      <image class="txicon" mode="aspectFill" src="{{msgobj.headImg?msgobj.headImg:alldata.headImg}}" />
+      <view class="tex">
+        <view>{{msgobj.userName?msgobj.userName:alldata.userName}}</view>
+        <view>用户等级:{{alldata.levelName}}</view>
+        <view wx:if="{{alldata.agent}}">
+        <view class="hecount" wx:if="{{alldata.levelUp && alldata.levelUp == -999}}">您已达到最高等级</view>
+        <view class="hecount" wx:else>还差{{alldata.levelUp}}盒升级</view>
+        </view>
+      </view>
+    </view>
+    <view >
+      <view wx:if="{{!alldata.agent && alldata.zige}}" class="hebtn" bindtap="Naveurl" data-url="../myself/Apply/index">申请为代理</view>
+      <view wx:elif="{{alldata.agent }}" class="hebtn" bindtap="Naveurlas">我的推广二维码</view>
+      <view wx:elif="{{!alldata.agent && !alldata.zige}}" class="hebtn" bindtap="showZc">代理政策</view>
+    </view>
+    
+  </view>
+  <view class="conts lists">
+    <view class="listi">
+      <view>我的订单</view>
+      <view class="lirig" bindtap="Naveurl" data-url="../myself/orderList/index?type=0">
+        <view>全部订单</view>
+        <image class="icons" src="../../images/my/jt.png" />
+      </view>
+    </view>
+    <view class="orderlist">
+      <view  bindtap="Naveurl" data-url="../myself/orderList/index?type=1">
+        <image class="icons" src="../../images/my/micon1.png"/>
+        <view >待付款</view>
+      </view>
+      <view  bindtap="Naveurl" data-url="../myself/orderList/index?type=2">
+        <image class="icons" src="../../images/my/micon2.png"/>
+        <view >待发货</view>
+      </view>
+      <view  bindtap="Naveurl" data-url="../myself/orderList/index?type=3">
+        <image class="icons" src="../../images/my/micon3.png"/>
+        <view >待收货</view>
+      </view>
+      <view  bindtap="Naveurl" data-url="../myself/orderList/index?type=4">
+        <image class="icons" src="../../images/my/micon4.png"/>
+        <view >待评价</view>
+      </view>
+    </view>
+  </view>
+  <view class="conts lists">
+      <view class="listi" bindtap="Naveurl" data-url="../myself/income/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon5.png" />
+          我的收益
+        </view>
+        <view class="lirig">
+          <view>{{alldata.income}}元</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/storeInfo/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon17.png" />
+          我的库存
+        </view>
+        <view class="lirig">
+          <!-- <view>{{alldata.income}}元</view> -->
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/teamBuy/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon18.png" />
+          团队收益
+        </view>
+        <view class="lirig">
+          <!-- <view>{{alldata.income}}元</view> -->
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/allgoods/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon6.png" />
+          发货量
+        </view>
+        <view class="lirig">
+          <view>{{alldata.totalSend}}</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/lowerLeave/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon7.png" />
+          下级代理数
+        </view>
+        <view class="lirig">
+          <view>{{alldata.totalChild}}</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <!-- <view class="listi" bindtap="Naveurl" data-url="../myself/weekgoods/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon8.png" />
+          每周发货量
+        </view>
+        <view class="lirig">
+          <view>{{alldata.sendOfWeek}}</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view> -->
+      <view class="listi" bindtap="Naveurl" data-url="../myself/peoples/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon9.png" />
+          代理人数
+        </view>
+        <view class="lirig">
+          <view>{{alldata.childOfWeek}}</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/delivergoods/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon10.png" />
+          待发货列表
+        </view>
+        <view class="lirig">
+          <view></view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/backgoods/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon10.png" />
+          退货待审批列表
+        </view>
+        <view class="lirig">
+          <view></view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+    </view>
+
+     <view class="conts lists">
+      <view class="listi" bindtap="Naveurl" data-url="../myself/bindPay/index?type=2">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon11.png" />
+          绑定支付宝
+        </view>
+        <view class="lirig">
+          <view>{{alldata.bindAliPay == true?'已绑定':'未绑定'}}</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/bindPay/index?type=1">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon12.png" />
+          绑定微信
+        </view>
+        <view class="lirig">
+          <view>{{alldata.bindWx == true?'已绑定':'未绑定'}}</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+      <view class="listi" bindtap="Naveurl" data-url="../myself/bindPay/index?type=3">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon13.png" />
+          绑定银行卡
+        </view>
+        <view class="lirig">
+          <view>{{alldata.bindCard == true?'已绑定':'未绑定'}}</view>
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+    </view>
+
+    <!-- <view class="conts lists">
+      <view class="listi" bindtap="Naveurl" data-url="../myself/Choosepre/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon16.png" />
+          选择上级代理
+        </view>
+        <view class="lirig">
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+    </view> -->
+
+    <view class="conts lists">
+      <view class="listi" bindtap="Naveurl" data-url="../myself/linedeal/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon14.png" />
+          线下交易
+        </view>
+        <view class="lirig">
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+    </view>
+
+    <view class="conts lists">
+      <view class="listi" bindtap="Naveurl" data-url="../myself/adressManagement/index">
+        <view class="lile">
+          <image class="icons icomel" src="../../images/my/micon15.png" />
+          地址管理 
+        </view>
+        <view class="lirig">
+          <image class="icons" src="../../images/my/jt.png" />
+        </view>
+      </view>
+    </view>
+<!--代理政策-->
+<i-modal title="代理政策" visible="{{ showTc }}" bind:ok="closeTc" show-cancel="{{ false }}">
+    <view style="padding:0 20rpx;text-align:left;">
+      <text >{{alldata.desc?alldata.desc:dilcont}}</text>
+      </view>
+</i-modal>
+</view>

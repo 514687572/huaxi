@@ -1,0 +1,40 @@
+<!--pages/myself/bindPay/index.wxml-->
+<view class="cont">
+<form bindsubmit='submincon'>
+  <view wx:if="{{types==1}}">
+    <view class="colist">
+      <view class="contit">微信号</view>
+      <view class="continp"><input name="account" value="{{Alldata.account}}" type="text" placeholder="请输入微信号" /></view>
+    </view>
+  </view>
+  <view wx:if="{{types==2}}">
+    <view class="colist">
+      <view class="contit">支付宝名</view>
+      <view class="continp"><input type="text" value="{{Alldata.name}}" name="name" placeholder="请输入支付宝名" /></view>
+    </view>
+    <view class="colist">
+      <view class="contit">支付宝账号</view>
+      <view class="continp"><input type="text" value="{{Alldata.account}}" name="account" placeholder="请输入支付宝账号" /></view>
+    </view>
+  </view>
+  <view wx:if="{{types==3}}">
+    <view class="colist">
+      <view class="contit">持卡人实名</view>
+      <view class="continp"><input type="text" value="{{Alldata.name}}" name="name" placeholder="请输入持卡人实名" /></view>
+    </view>
+    <view class="colist">
+      <view class="contit">银行卡号</view>
+      <view class="continp"><input type="number" value="{{Alldata.account}}" name="account" placeholder="请输入银行卡号" /></view>
+    </view>
+    <view class="colist">
+      <view class="contit">开户银行</view>
+      <picker class="continp" value="{{value}}" range="{{bankList}}" range-key="{{'name'}}" bindchange="bindChange">
+        <view class="continp"><input type="text" disabled="{{true}}" value="{{values}}"/></view>
+      </picker>
+      <!-- <view class="contit">开户行所在地</view>
+      <view class="continp"><input type="text" value="{{Alldata.openBranch}}" name="openBranch" placeholder="请输入开户行所在地" /></view> -->
+    </view>
+  </view>
+<button form-type="submit" class="conbtn">绑定</button>
+</form>
+</view>

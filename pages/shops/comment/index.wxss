@@ -1,0 +1,53 @@
+/* pages/shops/comment/index.wxss */
+.page{
+  padding-bottom: 120rpx;
+}
+image{
+
+}
+.tecon{
+  width: 90vw;
+  margin: 40rpx auto;
+  padding: 20rpx;
+  background-color: #fff;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+}
+.imgarr{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 20rpx;
+}
+.imgarr .imgcon{
+  width: 200rpx;
+  height: 200rpx;
+  padding: 2rpx;
+  margin-right: 40rpx;
+  margin-bottom: 40rpx;
+}
+.imgcon image{
+  max-width: 200rpx;
+  max-height: 200rpx;
+}
+.upimg{
+  margin: 20rpx;
+  width: 200rpx;
+  height: 200rpx;
+  color: #3C79F7;
+  text-align: center;
+  line-height: 200rpx;
+  border-radius: 10rpx;
+  border: 1rpx dashed #3C79F7;
+}
+.savebtn{
+  position:fixed;
+  width:100%;
+  bottom:0;
+  left:0;
+  background-color:#3C79F7;
+  color:#fff;
+  text-align:center;
+  line-height:100rpx;
+}

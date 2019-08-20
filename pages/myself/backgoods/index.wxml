@@ -1,0 +1,29 @@
+<!--pages/myself/backgoods/index.wxml-->
+<view class="cont">
+<view class="menu">
+    <view class="{{acindex==0?'items avtive':'items'}}" data-index='0' bindtap="chceList">全部</view>
+    <view class="{{acindex==1?'items avtive':'items'}}" data-index='1' bindtap="chceList">收货退货</view>
+    <view class="{{acindex==2?'items avtive':'items'}}" data-index='2' bindtap="chceList">库存退货</view>
+</view>
+<view class="conts">
+  <view class="comsg" wx:for="{{Alldata}}" wx:for-item="itemss" wx:for-index="i" wx:key="i">
+      <view class="orcont">
+        <view > <image class="coimgs" src="{{itemss.firstImg}}" mode="aspectFill"/></view>
+        <view >
+          <view>{{itemss.productName}}</view>
+          <view class="ordec">{{itemss.properties}}</view>
+          <view class="ordec">{{itemss.refundType===1?"收货退货":'库存退货'}}</view>
+        </view>
+      </view>
+      <view class="masright"> 
+      <view >x{{itemss.refundCount}}</view>
+      <view>
+        <view bindtap="choosBtn" data-code="{{items.orderRefundLogId}}" data-types="1" class="classbtn">确认退货</view>
+        <view bindtap="choosBtn" data-code="{{items.orderRefundLogId}}" data-types="2" class="classbtn">拒绝退货</view>
+      </view>
+      </view>
+      
+    </view>
+   
+</view>
+</view>

@@ -1,0 +1,46 @@
+<!--pages/myself/delivergoods/index.wxml-->
+<!--pages/myself/orderList/index.wxml-->
+<view class="cont">
+  <view class="conts" wx:for="{{Alldata.data}}" wx:for-item="items" wx:for-index="iii" wx:key="iii">
+    <view class="top">
+      <view class="ttime">订单编号:{{items.orderId}}</view>
+      <view class="ttype">待发货</view>
+    </view>
+    <view class="comsg">
+      <view class="orcont">
+        <view > <image class="coimgs" src="{{items.firstImg}}" mode="aspectFill"/></view>
+        <view >
+          <view>{{items.productName}}</view>
+          <view class="ordec">{{items.productDesc}}{{items.properties}}</view>
+          <view wx:if="{{items.userName}}">下单人:{{items.userName}}</view>
+          <view class="price">{{items.sendType===1?'收货待发货':'平台库存待发货'}}</view>
+        </view>
+      </view>
+      <view >x{{items.count}}</view>
+    </view>
+    <view class="botmsg">
+      <view ></view>
+      <view  class="botlists">
+        <view class="classbtn" bindtap="backgoods" data-code="{{items.orderAgentLogId}}">拒绝发货</view>
+        <view class="classbtn" wx:if="{{items.sendType !== 2}}" bindtap="handleOpen1" data-indexs="{{iii}}" data-code="{{items.orderAgentLogId}}">确认发货</view>
+        <view class="classbtn" bindtap="otherGive" data-code="{{items.orderAgentLogId}}">平台发货</view>
+      </view>
+    </view>
+  </view>
+ 
+  <i-modal visible="{{ visible1 }}" bind:ok="givegoods" bind:cancel="handleClose1">
+      <view class="adreatet" wx:if="{{ardeassdata}}">收货地址:{{ardeassdata.pro}} {{ardeassdata.city}} {{ardeassdata.area}} {{ardeassdata.detailAddress}}</view>
+      <view class="inptetxt">快递单号:<input type="text" maxlength="25" value="{{inptext}}" placeholder="请输入快递单号" bindinput="bindInp"/></view>
+      <radio-group class="radio-group" bindchange="chooseexp">
+        <label class="radio ralist"  wx:for="{{expressdata}}" wx:for-item="item" wx:for-index="ii" wx:key="ii">
+         <radio color="#3C79F7" value="{{item.code}}" />
+         <view class="raitem">{{item.name}}</view>
+        </label>
+      </radio-group>
+</i-modal>
+<i-modal title="提示" visible="{{ visible2 }}" bind:ok="backgoodss" bind:cancel="handleClose">
+    <view>确定拒绝发货吗？</view>
+</i-modal>
+</view>
+
+

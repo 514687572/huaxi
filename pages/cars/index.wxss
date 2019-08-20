@@ -1,0 +1,106 @@
+/* pages/cars/index.wxss */
+.container{
+  padding-bottom: 120rpx;
+}
+.cartop{
+  padding: 20rpx;
+  text-align: right;
+  color: #3C79F7;
+  background-color: #fff;
+}
+.carlist{
+  margin: 40rpx 0;
+
+}
+.linksr{
+  width: 360rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.caritem{
+  padding: 30rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.carimg{
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+}
+.carsname{
+  width: 250rpx;
+  margin-left: 20rpx;
+}
+.varc{
+  margin-right: 20rpx;
+}
+.carsum{
+  /* display: flex;
+  align-items: center;
+  justify-content: flex-start; */
+}
+.carsum view{
+  /* width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #ddd;
+  margin-right: 10rpx; */
+}
+.carsum view input{
+  /* display: inline-block;
+  width: 50rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 5rpx; */
+}
+.carname{
+  font-size: 32rpx;
+  margin-bottom: 8rpx;
+}
+.carprie{
+  color: #999;
+  font-size: 24rpx;
+}
+.carpri{
+  color: #E51C23;
+}
+.carccums{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  padding-left: 20rpx;
+  background-color: #fff;
+}
+.carsri{
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.goprice{
+  width: 220rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  margin-left: 10rpx;
+  background-color: #F86065;
+}
+.pric{
+  font-size: 32rpx;
+  color: #E51C23;
+}
+.carall{
+  color: #999;
+}

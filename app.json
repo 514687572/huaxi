@@ -1,0 +1,69 @@
+{
+  "pages": [
+    "pages/shops/index/index",
+    "pages/myself/index",
+    "pages/shops/index/Searchs/index",
+    "pages/myself/getMoney/index",
+    "pages/cars/index",
+    "pages/index/index",
+    "pages/myself/addLine/index",
+    "pages/myself/delivergoods/index",
+    "pages/myself/orderList/index",
+    "pages/myself/linedeal/index",
+    "pages/myself/adressManagement/index",
+    "pages/shops/nowbuy/index",
+    "pages/shops/detail/index",
+    "pages/myself/Apply/index",
+    "pages/shops/detail/comment/index",
+    "pages/myself/income/index",
+    "pages/myself/allgoods/index",
+    "pages/myself/weekgoods/index",
+    "pages/myself/lowerLeave/index",
+    "pages/myself/peoples/index",
+    "pages/myself/bindPay/index",
+    "pages/myself/adressMsg/index",
+    "pages/shops/comment/index",
+    "pages/myself/Choosepre/index",
+    "pages/myself/storeInfo/index",
+    "pages/myself/backgoods/index",
+    "pages/myself/teamBuy/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3c79F7",
+    "navigationBarTitleText": "口腔养护",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/kq1.png",
+        "iconPath": "images/rl.png",
+        "pagePath": "pages/shops/index/index",
+        "text": "商城"
+      },
+      {
+        "selectedIconPath": "images/tx1.png",
+        "iconPath": "images/tx.png",
+        "pagePath": "pages/cars/index",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/wq1.png",
+        "iconPath": "images/wq.png",
+        "pagePath": "pages/myself/index",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  }
+}

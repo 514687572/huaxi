@@ -1,0 +1,20 @@
+<!--pages/myself/storeInfo/index.wxml-->
+<view class="">
+  <view class="inlist">
+    <view class="item" wx:for="{{Alldata}}" wx:for-item="itemsa">
+      <view class="itcons">
+        <view class="linimg"><image src="{{itemsa.images}}" mode="aspectFit"/></view>
+        <view class="intiit">
+          <view >{{itemsa.productName}}</view>
+          <view class="intime">{{itemsa.properties}}</view>
+          <view class="pircecut">
+        <view>平台库存量:{{itemsa.storeCount}}</view>
+        <view class="intime">收货(自己)库存量:{{itemsa.count}}</view>
+      </view>
+          </view>
+      </view>
+      
+    </view>
+  </view>
+</view>
+

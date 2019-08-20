@@ -1,0 +1,116 @@
+/* pages/myself/index.wxss */
+.conts{
+  margin-bottom: 40rpx;
+}
+.head{
+  padding: 40rpx 0 40rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+.head .msgicon{
+  width: 60vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.head .tex{
+  margin-left: 20rpx;
+}
+.head .tex view:first-child{
+  font-size: 32rpx;
+}
+.head .tex view:nth-child(2){
+  color: #999;
+}
+.head .txicon{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+}
+.head .hebtn{
+  padding: 12rpx;
+  text-align: center;
+  color: #fff;
+  margin-top: 10rpx;
+  border-radius: 40rpx 0 0 40rpx;
+  background-color: #3C79F7;
+}
+.lists{
+  background-color: #fff;
+}
+.listi{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx #eee solid;
+}
+.lirig{
+  width: 30vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.listi .icons{
+  width: 42rpx;
+  height: 42rpx;
+ 
+}
+.listi .icomel{
+  margin-right: 12rpx;
+}
+.orderlist{
+  padding: 12rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.lile{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.orderlist .icons{
+  display: block;
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+}
+.hecount{
+  margin-top: 8rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #FF3300;
+  animation: viewlinear 2s linear infinite;
+}
+@keyframes viewlinear {
+  
+  /** 第一种写法**/
+  0% {
+    color: #FF3300;
+  }
+  15% {
+    color: #FF0000;
+  }
+  30% {
+    color: #FF0000;
+  }
+  45% {
+    color: #CC0000;
+  }
+  60% {
+    color: #0066FF;
+  }
+  75% {
+    color: #3366FF;
+  }
+  90% {
+    color: #3333FF;
+  }
+  100% {
+    color: #0033FF;
+  }
+
+}

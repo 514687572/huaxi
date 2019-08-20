@@ -1,0 +1,29 @@
+<!--pages/myself/Apply/index.wxml-->
+<view>
+<form bindsubmit='submincon'>
+<view class='aplist'>
+  <view class='aptit'>申请人</view>
+  <input type='text' placeholder='姓名' name="applyName"></input>
+</view>
+<view class='aplist'>
+  <view class='aptit'>电话</view>
+  <input type='text' placeholder='电话' name="phone" bindinput="phonec" maxlength="11"></input>
+</view>
+<view class='aplist'>
+  <view class='aptit'>验证码</view>
+  <input type='text' style="widht:160rpx !important;" placeholder='验证码' name="validCode" maxlength="6"></input>
+  <view wx:if="{{!issecond}}" style="color:#3C79F7;" bindtap="getCode">发送验证码</view>
+  <view wx:if="{{issecond}}" >({{second}})秒后重新获取</view>
+</view>
+<view class='aplist'>
+  <view class='aptit'>微信号</view>
+  <input type='text' placeholder='微信号' name="wxNumber"></input>
+</view>
+<view class='aplist'>
+  <view class='aptit'>身份证号</view>
+  <input type='text' placeholder='身份证号' name="idCard" maxlength="18"></input>
+</view>
+<button form-type="submit" class='subtn'>提交</button>
+</form>
+
+</view>

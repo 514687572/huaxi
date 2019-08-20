@@ -1,0 +1,32 @@
+<!--pages/myself/linedeal/index.wxml-->
+<view class="cont">
+  <view class="menu">
+    <view class="{{acindex==0?'items avtive':'items'}}" data-index='0' bindtap="chceList">全部</view>
+    <view class="{{acindex==1?'items avtive':'items'}}" data-index='1' bindtap="chceList">审核中</view>
+    <view class="{{acindex==2?'items avtive':'items'}}" data-index='2' bindtap="chceList">已通过</view>
+    <view class="{{acindex==3?'items avtive':'items'}}" data-index='3' bindtap="chceList">未通过</view>
+  </view>
+
+  <view class="conts" wx:for="{{Alldata.data}}" wx:for-item="items">
+    <view class="top">
+      <view class="ttime">时间:{{items.applyTime}}</view>
+      <view class="ttype" wx:if="{{items.applyTime == 1}}">待审核</view>
+      <view class="ttype" wx:elif="{{items.applyTime == 2}}">已通过</view>
+      <view class="ttype" wx:elif="{{items.applyTime == 3}}">未通过</view>
+    </view>
+    <view class="comsg">
+      <view class="orcont">
+        <view > <image class="coimgs" src="{{items.firstImg}}" mode="aspectFill"/></view>
+        <view >
+          <view>{{items.productName}}</view>
+          <view class="ordec">{{items.price}}</view>
+        </view>
+      </view>
+      <view >x{{items.count}}</view>
+    </view>
+    <view class="botmsg price">
+      总计额：￥{{items.totalAmount}}
+    </view>
+  </view>
+  <view class="clbtns" bindtap="Naveurl" data-url="../../myself/addLine/index">添加线下交易明细单</view>
+</view>

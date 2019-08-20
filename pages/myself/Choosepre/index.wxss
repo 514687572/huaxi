@@ -1,0 +1,18 @@
+/* pages/myself/Choosepre/index.wxss */
+.pickcon{
+  line-height: 100rpx;
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.addad {
+position:fixed;
+width:100%;
+left:0;
+bottom:0;
+line-height:100rpx;
+background-color:#3C79F7;
+color:#fff;
+font-size:32rpx;
+text-align:center;
+
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-modal": "../../../iview/modal/index"
+  },
+  "navigationBarTitleText": "线下交易明细申请"
+}

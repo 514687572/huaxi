@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-modal": "../../../iview/modal/index",
+    "i-radio": "../../../iview/radio/index",
+    "i-radio-group": "../../../iview/radio-group/index",
+    "i-icon": "../../../iview/icon/index"
+  },
+  "navigationBarTitleText": "待发货列表"
+}

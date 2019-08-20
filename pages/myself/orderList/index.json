@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "i-count-down": "../../../iview/count-down/index",
+    "i-modal": "../../../iview/modal/index",
+    "i-steps": "../../../iview/steps/index",
+    "i-step": "../../../iview/step/index",
+    "i-input-number": "../../../iview/input-number/index"
+  },
+  "navigationBarTitleText": "订单列表",
+  "onReachBottomDistance":100
+}

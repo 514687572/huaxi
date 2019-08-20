@@ -1,0 +1,11 @@
+<!--pages/myself/adressManagement/index.wxml-->
+<view class="adcon">
+  <view class="adlist" wx:for="{{Alldata}}" wx:for-item="items" bindtap="Naveurls" data-url="../../myself/adressMsg/index?id={{items.receiverAddressId}}">
+    <view class="" >
+      <view class="adtit">{{items.receiverName}}  {{items.phone}}</view>
+       <view class="addec">{{items.pro}} {{items.city}} {{items.area}} {{items.detailAddress}}</view>
+    </view>
+    <view class=""><image class="adjt" src="../../../images/my/jt.png" /></view>
+  </view>
+  <view class="addad" bindtap="Naveurls" data-url="../../myself/adressMsg/index">新建收货地址</view>
+</view>

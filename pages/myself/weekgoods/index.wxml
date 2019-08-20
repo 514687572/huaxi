@@ -1,0 +1,20 @@
+<!--pages/myself/weekgoods/index.wxml-->
+<view class="">
+  <view class="itop">
+    <view class="itit">每周发货量</view>
+    <view class="icount">{{Alldata.totalSale}}</view>
+  </view>
+  <view class="icont">
+    <view class="icontop">历史记录</view>
+    <view class="iconlist">
+      <view class="iconitem" wx:for="{{Alldata.list}}" wx:for-item="itmesa">
+        <view >
+          <view class="icontit">{{itmesa.desc}}</view>
+          <view class="icontime">{{itmesa.time}}</view>
+        </view>
+        <view class="icnum">{{itmesa.count}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+

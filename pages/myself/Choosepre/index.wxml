@@ -1,0 +1,9 @@
+<!--pages/myself/Choosepre/index.wxml-->
+<view >
+<view>
+  <picker class="pickcon" value="{{value}}" range="{{Userlist}}" range-key="{{'userName'}}" bindchange="bindChange">
+    <view>选择上级: {{values}}</view>
+  </picker>
+  <view bindtap="surePre" class="addad">确 定</view>
+</view>
+</view>

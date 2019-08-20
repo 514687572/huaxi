@@ -1,0 +1,26 @@
+<!--pages/myself/allgoods/index.wxml-->
+<view class="">
+  <view class="itop">
+    <view class="itit">总发货量</view>
+    <view class="icount">{{Alldata.totalSale}}</view>
+  </view>
+  <view class="icont">
+    <!-- <view class="icontop">历史记录</view> -->
+    <view class="menu">
+      <view class="{{acindex=='0'?'items avtive':'items'}}" data-index='0' bindtap="chceList">总发货量</view>
+      <view class="{{acindex==1?'items avtive':'items'}}" data-index='1' bindtap="chceList">今日</view>
+      <view class="{{acindex==2?'items avtive':'items'}}" data-index='2' bindtap="chceList">本周</view>
+      <view class="{{acindex==3?'items avtive':'items'}}" data-index='3' bindtap="chceList">本月</view>
+      <view class="{{acindex==4?'items avtive':'items'}}" data-index='4' bindtap="chceList">本年</view>
+    </view>
+    <view class="iconlist">
+      <view class="iconitem" wx:for="{{Alldata.list}}" wx:for-item="itmesa">
+        <view >
+          <view class="icontit">{{itmesa.desc}}</view>
+          <view class="icontime">{{itmesa.time}}</view>
+        </view>
+        <view class="icnum">{{itmesa.count}}</view>
+      </view>
+    </view>
+  </view>
+</view>

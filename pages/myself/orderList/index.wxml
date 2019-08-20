@@ -1,0 +1,120 @@
+<!--pages/myself/orderList/index.wxml-->
+<view class="cont">
+  <view class="menu">
+    <view class="{{acindex==0?'items avtive':'items'}}" data-index='0' bindtap="chceList">全部</view>
+    <view class="{{acindex==1?'items avtive':'items'}}" data-index='1' bindtap="chceList">待支付</view>
+    <view class="{{acindex==2?'items avtive':'items'}}" data-index='2' bindtap="chceList">待发货</view>
+    <view class="{{acindex==3?'items avtive':'items'}}" data-index='3' bindtap="chceList">待收货</view>
+    <view class="{{acindex==4?'items avtive':'items'}}" data-index='4' bindtap="chceList">待评论</view>
+    <view class="{{acindex==5?'items avtive':'items'}}" data-index='5' bindtap="chceList">已完成</view>
+  </view>
+
+  <view class="conts" wx:for="{{Alldata.data}}" wx:for-item="items" wx:for-index="rs" wx:key="{{items.orderId}}">
+    <view class="top">
+      <view class="ttime">订单编号:{{items.orderId}}</view>
+      <view class="ttype" wx:if="{{items.orderStatus == 1 }}">待支付</view>
+      <view class="ttype" wx:elif="{{items.orderStatus == 2}}">待发货</view>
+      <view class="ttype" wx:elif="{{items.orderStatus == 3}}">待收货</view>
+      <view class="ttype" wx:elif="{{items.orderStatus == 4}}">待评论</view>
+      <view class="ttype" wx:elif="{{items.orderStatus == 5}}">已完成</view>
+    </view>
+    <view class="comsg" wx:for="{{items.productOrderSnapshots}}" wx:for-item="itemss" wx:for-index="i" wx:key="i">
+      <view class="orcont">
+        <view > <image class="coimgs" src="{{itemss.firstImg}}" mode="aspectFill"/></view>
+        <view >
+          <view>{{itemss.productName}}</view>
+          <view class="ordec">{{itemss.productDesc}}{{itemss.properties}}</view>
+        </view>
+      </view>
+      <view class="masright"> 
+      <view style="width:15vw;text-align:right;">x{{itemss.count}}</view>
+      <view wx:if="{{items.orderStatus == 5 }}">
+        <view bindtap="handleOpen3" data-code="{{items.orderId}}" data-indexs="{{rs}}" data-indexss="{{i}}" class="classbtn">去退货</view>
+      </view>
+      </view>
+      
+    </view>
+    <view class="botmsg">
+      <view class="price">总计额:￥{{items.totalAmount}}</view>
+      <view wx:if="{{items.orderStatus == 1 }}" class="botlists">
+        <view class="view-wrap">
+           <text class="type-title">支付剩余:</text>
+              <i-count-down
+                  target="{{items.orderTimestamp}}"
+                  format="{{myFormat}}"
+                  clear-timer="{{clearTimer}}"
+                  data-cid="{{items.orderId}}"
+                  bindcallback="myLinsterner"
+              ></i-count-down>
+        </view>
+        <view wx:if="{{!items.overTiem}}" class="classbtn" bindtap="gopay" data-url="../../shops/nowbuy/index" data-code="{{items.orderId}}">去支付</view>
+        <view class="classbtn" bindtap="handleOpen1" data-code="{{items.orderId}}">取消订单</view>
+      </view>
+      <view wx:if="{{items.orderStatus == 2 }}">
+      </view>
+      <view class="btnlist" wx:if="{{items.orderStatus == 3}}">
+        <view class="classbtn" bindtap="handleOpen4" data-code="{{items.orderId}}">物流信息</view>
+        <view class="classbtn" bindtap="handleOpen2" data-code="{{items.orderId}}">确认收货</view>
+      </view>
+      <view wx:if="{{items.orderStatus == 4}}">
+        <navigator url="../../shops/comment/index?id={{items.orderId}}"><view class="classbtn" bindtap="gocomment" data-code="{{items.orderId}}">去评论</view></navigator>
+      </view>
+    </view>
+  </view>
+
+<i-modal title="提示" visible="{{ visible1 }}" bind:ok="goCancel" bind:cancel="handleClose">
+    <view>确定取消订单吗？</view>
+</i-modal>
+
+<i-modal title="提示" visible="{{ visible2 }}" bind:ok="sureGet" bind:cancel="handleClose">
+    <view>确认已经收到货物了吗？</view>
+</i-modal>
+
+<i-modal title="物流信息" visible="{{ visiblewl }}" bind:ok="handleClose" show-cancel="{{ false }}" class="showllist">
+  <view class="teclae">
+     <view >商品名称:{{wldata.productName}}</view>
+    <view >快递单号:{{wldata.expressNo}}</view>
+    <view >配送方:{{wldata.expressName}}</view>
+    <view >
+      <view wx:if="{{!wldata.expressInfo || wldata.expressInfo.length <=0}}" style="color:#E51C23">暂无物流配送信息</view>
+      <i-steps current="{{verticalCurrent}}" direction="vertical">
+          <i-step wx:for="{{wldata.expressInfo}}" wx:for-item="itemas" wx:for-index="irr" wx:key="irr">
+              <view slot="title">
+                    {{itemas.AcceptTime}}
+              </view>
+              <view slot="content">
+                  {{itemas.AcceptStation}}
+              </view>
+          </i-step>
+      </i-steps>
+    </view>
+  </view>
+   
+</i-modal>
+
+
+<i-modal title="" visible="{{ visible3 }}" bind:ok="reBack" bind:cancel="handleClose">
+    <view class="bckt">
+      <radio-group bindchange="checkboxChange">
+        退货类型：
+        <label class="radio-group">
+          <radio color="#3C79F7" checked="{{cachek}}" value="1"/>收货
+        </label>
+        <label class="checkbox">
+          <radio color="#3C79F7" checked="{{cachek}}" value="2"/>库存
+        </label>
+      </radio-group>
+    </view>
+    <view class="backinp">
+    <view>退货数量：</view>
+    <i-panel title="">
+          <view class="gritmes">
+            <i-input-number type="number" value="{{backcount}}" min="1" max="{{maxCount}}" bindchange="chancenum" data-num="{{backcount}}"/>
+          </view>
+        </i-panel>
+    </view>
+        <view class="bckt">可退数量：{{canback}}</view>
+    <view class="bckt" wx:if="{{visible3}}"><textarea bindinput="backcont" fixed="{{true}}" value="{{backcont}}" class="backtext" placeholder="退货原因,最多200字" maxlength="200"></textarea></view>
+</i-modal>
+</view>
+

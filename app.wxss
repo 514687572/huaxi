@@ -1,0 +1,19 @@
+/**app.wxss**/
+page {
+  font-size: 28rpx;
+  color: #333;
+  background-color: #f3f3f3;
+  box-sizing: border-box;
+  line-height: 150%;
+}
+.container {
+  box-sizing: border-box;
+  width:100%;
+}
+view{
+  box-sizing: border-box;
+}
+.navigator-hover{
+  opacity: 1;
+  background-color: none;
+}

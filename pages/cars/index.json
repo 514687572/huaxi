@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "购物车",
+  "usingComponents": {
+    "i-input-number": "../../iview/input-number/index",
+    "i-modal": "../../iview//modal/index"
+  }
+}

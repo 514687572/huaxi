@@ -1,0 +1,14 @@
+<!--pages/shops/comment/index.wxml-->
+<view class="page">
+  <view >
+    <textarea class="tecon" bindinput="chanVal" placeholder="请输入评论内容" maxlength="200"></textarea>
+  </view>
+  <view class="imgarr">
+    <view class="imgcon" wx:for="{{imgArr}}" wx:for-item="itmes" wx:for-index="i">
+      <image src="{{itmes.url}}" mode="aspectFill" />
+    </view>
+    
+  </view>
+  <view class="upimg" bindtap="uoimg">上传图片</view>
+  <view class="savebtn" bindtap="saveCom">发布</view>
+</view>

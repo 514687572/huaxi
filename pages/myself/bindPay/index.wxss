@@ -1,0 +1,31 @@
+/* pages/myself/bindPay/index.wxss */
+page{
+background-color: #fff;
+}
+.cont{
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.colist{
+  padding: 30rpx;
+}
+.contit{
+  font-size: 32rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+.continp input{
+  padding:10rpx 20rpx;
+  border: 1rpx #ddd solid;
+  border-radius: 10rpx;
+}
+.conbtn{
+  width: 100%;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 80rpx;
+  background-color: #b9b9b9;
+  color: #fff;
+  font-size: 32rpx;
+ background-color: #3C79F7;
+}

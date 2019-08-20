@@ -1,0 +1,87 @@
+/* pages/myself/storeInfo/index.wxss *//* pages/myself/income/index.wxss */
+.intop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.txtit{
+  color: #999;
+}
+.txpice{
+  font-size: 40rpx;
+  color: #E51C23;
+  font-weight: bold;
+}
+.txbtn{
+  color: #3C79F7;
+  padding: 10rpx 30rpx;
+  border-radius: 30rpx;
+  border: 1rpx #ddd solid;
+}
+
+.incon{
+  background-color: #fff;
+}
+.incon .menu{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #666;
+  border-bottom: 1px #ddd solid;
+}
+.menu .items{
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.menu .avtive{
+  color: #3C79F7;
+  border-bottom: 1rpx #3C79F7 solid;
+}
+.inlist{
+  
+}
+.itcons{
+  display: flex;
+ align-items: initial;
+  justify-content: flex-start;
+}
+.linimg{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+.linimg image{
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  
+}
+.inlist .item{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10rpx 30rpx;
+  border-bottom: 1rpx solid #ddd;
+  background-color: #fff;
+}
+.item .intiit{
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}
+.item .intime{
+  color: #999;
+  font-size: 28rpx;
+}
+.item .pirceadd{
+  font-size: 32rpx;
+  color: #3C79F7;
+}
+.item .pircecut{
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #E51C23;
+}

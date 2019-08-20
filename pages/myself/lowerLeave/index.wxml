@@ -1,0 +1,38 @@
+<!--pages/myself/lowerLeave/index.wxml-->
+<view class="">
+  <view class="itop">
+    <view class="itit">下级代理数</view>
+    <view class="icount">{{Alldata.totalSale}}</view>
+  </view>
+  <view class="icont">
+    <view class="icontop">历史记录</view>
+    <view class="iconlist">
+      <view  wx:for="{{Alldata.list}}" wx:for-item="itmesa" wx:for-index="i">
+        <view class="iconitem"  bindtap="showCh" data-index="{{i}}">
+        <view >
+          <view class="icontit">{{itmesa.desc}}</view>
+          <view class="icontime">{{itmesa.level}}</view>
+          <view class="icontime">{{itmesa.time}}</view>
+        </view>
+        <view class="icnum">
+          <view class="icnums">展开下级</view>
+           <!-- <view >{{itmesa.count}}</view> -->
+          
+          </view>
+        </view>
+        <!---->
+        <view wx:if="{{itmesa.showch}}">
+          <view class="iconitems" wx:for="{{itmesa.child}}" wx:for-item="itmesac">
+              <view >
+              <view class="icontit">{{itmesac.desc}}</view>
+              <view class="icontime">{{itmesac.level}}</view>
+              <view class="icontime">{{itmesac.time}}</view>
+            </view>
+            <!-- <view class="icnum">{{itmesac.count}}</view>           -->
+        </view>
+         </view> 
+    </view>
+  </view>
+  </view>
+</view>
+

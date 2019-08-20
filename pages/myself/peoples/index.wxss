@@ -1,0 +1,58 @@
+/* pages/myself/peoples/index.wxss */
+.itop{
+  padding: 40rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.itit{
+  color: #999;
+}
+.icount{
+  color: #3c79f7;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.icont{
+  background-color: #fff;
+}
+.icontop{
+  padding: 20rpx;
+  border-bottom: 1rpx #ddd solid;
+}
+.iconlist{
+  padding: 0 30rpx;
+}
+.iconitem{
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx #ddd solid;
+}
+.icontit{
+  font-size: 32rpx;
+}
+.icontime{
+  color: #999;
+}
+.icnum{
+  font-size: 32rpx;
+  color: #3c79f7;
+}
+.menu{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #666;
+  border-bottom: 1px #ddd solid;
+}
+.menu .items{
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.menu .avtive{
+  color: #3C79F7;
+  border-bottom: 1rpx #3C79F7 solid;
+}

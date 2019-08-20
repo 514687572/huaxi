@@ -1,0 +1,32 @@
+<!--pages/myself/income/index.wxml-->
+<view class="">
+  <view class="intop">
+    <view >
+      <view class="txtit">{{textprice}}</view>
+      <view class="txpice">￥{{Alldata.totalIncome}}</view>
+    </view>
+    <view class="txbtn" bindtap="gogPay">去提现</view>
+  </view>
+  <view class="incon">
+    <view class="menu">
+      <view class="{{acindex==1?'items avtive':'items'}}" data-index='1' bindtap="chceList">佣金</view>
+      <view class="{{acindex==2?'items avtive':'items'}}" data-index='2' bindtap="chceList">本金</view>
+      <view class="{{acindex==3?'items avtive':'items'}}" data-index='3' bindtap="chceList">8%提成</view>
+      <view class="{{acindex==5?'items avtive':'items'}}" data-index='5' bindtap="chceList">管理奖</view>
+      <view class="{{acindex==6?'items avtive':'items'}}" data-index='6' bindtap="chceList">股份配比</view>
+      <!-- <view class="{{acindex==4?'items avtive':'items'}}" data-index='4' bindtap="chceList">全球2元分红</view> -->
+    </view>
+  
+  <view class="inlist">
+    <view class="item" wx:for="{{Alldata.incomeList}}" wx:for-item="itemsa">
+      <view >
+        <view class="intiit">{{itemsa.desc}}</view>
+        <view class="intime">{{itemsa.incomeTime}}</view>
+      </view>
+      <view class="pircecut">
+        ￥{{itemsa.income}}
+      </view>
+    </view>
+  </view>
+  </view>
+</view>

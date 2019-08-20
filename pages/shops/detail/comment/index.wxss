@@ -1,0 +1,58 @@
+/* pages/shops/detail/comment/index.wxss */
+/**/
+.conts{
+  margin-bottom: 40rpx;
+}
+.lists{
+  background-color: #fff;
+}
+.listi{
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx #eee solid;
+}
+.lirig{
+  width: 50vw;
+  color: #999;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.listi .icons{
+  width: 40rpx;
+  height: 40rpx;
+}
+.lile{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.detail .lile .icons{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 70rpx;
+  margin-right: 12rpx;
+}
+.detail .ptime{
+  color: #999;
+}
+.pcon {
+  border-bottom: 1rpx #eee solid;
+}
+.pcon .listi{
+  border: none;
+  padding-bottom: 0;
+}
+.pcont{
+  width: 100%;
+  padding: 10rpx 40rpx 20rpx 40rpx;
+  color: #999;
+}
+.pcont image{
+  display: inline-block;
+  max-width: 28vw;
+  max-height: 28vw;
+  margin-right: 1vw;
+}

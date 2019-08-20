@@ -1,0 +1,48 @@
+/* pages/myself/getMoney/index.wxss */
+.vitop{
+  padding: 30rpx;
+  background-color: #fff;
+}
+.vitext{
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alltext{
+  color: #3C79F7;
+}
+.alp{
+  font-size: 50rpx;
+}
+.alinp input{
+  width: 400rpx;
+  margin-left: 10rpx;
+}
+.alinp{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.alri{
+  margin-top: 30rpx;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.ralist{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30rpx;
+}
+.bbtns{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3C79F7;
+  color: #fff;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 32rpx;
+}

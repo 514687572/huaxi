@@ -1,0 +1,56 @@
+/* pages/myself/lowerLeave/index.wxss */
+.itop{
+  padding: 40rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.itit{
+  color: #999;
+}
+.icount{
+  color: #3c79f7;
+  font-size: 40rpx;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.icont{
+  background-color: #fff;
+}
+.icontop{
+  padding: 20rpx;
+  border-bottom: 1rpx #ddd solid;
+}
+.iconlist{
+  padding: 0;
+}
+.iconitem{
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx #ddd solid;
+}
+.iconitems{
+  padding: 20rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60rpx;
+  border-bottom: 1rpx #ddd solid;
+}
+.icontit{
+  font-size: 32rpx;
+}
+.icontime{
+  color: #999;
+}
+.icnum{
+  font-size: 32rpx;
+  color: #3c79f7;
+  text-align: right;
+}
+.icnums{
+  color: #666;
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
+}

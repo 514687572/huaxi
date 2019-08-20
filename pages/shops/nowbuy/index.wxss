@@ -1,0 +1,106 @@
+/* pages/shops/nowbuy/index.wxss */
+.orcon{
+
+}
+.orcon .adretop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  background-color: #fff;
+}
+.orcon .admsg{
+  width: 80vw;
+}
+.orjticon{
+  width:40rpx;
+  height:40rpx;
+}
+.oritems{
+  padding-top: 40rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  background-color: #fff;
+}
+.oritleft{
+  width: 80vw;
+  display: flex;
+  justify-content: flex-start;
+}
+.oritem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  padding: 0 30rpx 30rpx 30rpx;
+}
+.carsum{
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.gritmes{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.oritem .orimg{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+}
+.orname{
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.ordec{
+  color: #999;
+
+}
+.orpice{
+  color: #E51C23;
+  margin-bottom: 10rpx;
+}
+.contprices{
+  background-color: #fff;
+}
+.orplist{
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 30rpx 15rpx 30rpx;
+}
+.orplists{
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px #ddd solid;
+  font-size: 32rpx;
+  padding: 20rpx 30rpx;
+}
+.orpay{
+  width: 80vw;
+  color: #fff;
+  text-align: center;
+  line-height: 80rpx;
+  margin: 60rpx auto 0 auto;
+  background-color: #43AD42;
+  border-radius: 10rpx;
+}
+.ralist{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 30rpx;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+}
+.addad{
+  width:80vw;
+  margin:40rpx auto;
+  background-color:#3C79F7;
+  text-align:center;
+  line-height:80rpx;
+  color:#fff;
+  border-radius:10rpx;
+}

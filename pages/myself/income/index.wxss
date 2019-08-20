@@ -1,0 +1,67 @@
+/* pages/myself/income/index.wxss */
+.intop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+}
+.txtit{
+  color: #999;
+}
+.txpice{
+  font-size: 40rpx;
+  color: #E51C23;
+  font-weight: bold;
+}
+.txbtn{
+  color: #3C79F7;
+  padding: 10rpx 30rpx;
+  border-radius: 30rpx;
+  border: 1rpx #ddd solid;
+}
+
+.incon{
+  background-color: #fff;
+}
+.incon .menu{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #666;
+  border-bottom: 1px #ddd solid;
+}
+.menu .items{
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+}
+.menu .avtive{
+  color: #3C79F7;
+  border-bottom: 1rpx #3C79F7 solid;
+}
+.inlist{
+  padding: 0 40rpx;
+}
+.inlist .item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.item .intiit{
+  font-size: 32rpx;
+}
+.item .intime{
+  color: #999;
+}
+.item .pirceadd{
+  font-size: 32rpx;
+  color: #3C79F7;
+}
+.item .pircecut{
+  font-size: 32rpx;
+  color: #E51C23;
+}
