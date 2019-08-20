@@ -1,4 +1,4 @@
-{
+﻿{
   "pages": [
     "pages/shops/index/index",
     "pages/myself/index",
@@ -61,9 +61,9 @@
   },
   "sitemapLocation": "sitemap.json",
   "networkTimeout": {
-    "request": 60000,
-    "connectSocket": 60000,
-    "uploadFile": 60000,
-    "downloadFile": 60000
+    "request": 30000,
+    "connectSocket": 30000,
+    "uploadFile": 30000,
+    "downloadFile": 30000
   }
 }
